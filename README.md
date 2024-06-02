@@ -25,7 +25,7 @@ A two-stage annotation process is employed, involving initial annotation by one 
 
 
 ## Sentiment Prediction
-We designed fine-grained prompts for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
+We designed **fine-grained** prompts for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
 
 <table>
   <thead>
@@ -202,3 +202,11 @@ Using GPT-3.5, we identified and extracted limitations from "Dissatisfied" respo
   </tbody>
 </table>
 
+
+## Analysis
+
+- ```Difference between the outcomes of coarse prompt and fine-grained prompt```
+
+![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/comparison_example1_.png)
+
+![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/comparison_example1.png)
