@@ -17,41 +17,117 @@ The SMILE-College dataset is designed for sentiment analysis of student response
 
 Three Steps involved during annotations:
 - ```Sentiment Annotation with LLMs```
-Utilizes large language models (LLMs) with a coarse prompt to categorize sentiments into Satisfied, Dissatisfied, and Neutral. This step serves as a preliminary assessment of students' sentiment spectrum.
+Utilizes large language models (LLMs) with a **coarse prompt** to categorize sentiments into Satisfied, Dissatisfied, and Neutral. This step serves as a preliminary assessment of students' sentiment spectrum.
 - ```Sentiment Category Identification```
 Multiple LLMs are evaluated and findings indicate limitations in the standard three-category framework, leading to the introduction of the "Mixed" category for nuanced sentiment expressions.
 - ```Human Annotation and Validation```
 A two-stage annotation process is employed, involving initial annotation by one annotator and validation by another.
 
-<!-- 
 
-## Results
-
-Here we provide the results on the new version of natural language questions provided in `mimicsql_data/mimicsql_natual_v2`.
+## Sentiment Prediction
+We designed fine-grained prompts for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
 
 <table>
   <thead>
     <tr>
-      <th>Dataset</th>
-      <th colspan="2">Overall Evaluation</th>
-      <th colspan="6">Breakdown Evaluation</th>
+      <th></th>
+      <th colspan="3">Satisfied</th>
+      <th colspan="3">Dissatisfied</th>
+      <th colspan="3">Mixed</th>
+      <th colspan="3">Neutral</th>
+      <th colspan="3">Overall</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td></td><td>Acc_LF</td><td>Acc_EX</td><td>Agg_op</td><td>Agg_col</td><td>Table</td><td>Con_col+op</td><td>Con_val</td><td>Average</td>
+      <td>Mistral</td>
+      <td>0.88</td>
+      <td>0.28</td>
+      <td>0.43</td>
+      <td>0.95</td>
+      <td>0.46</td>
+      <td>0.62</td>
+      <td>0.61</td>
+      <td>0.64</td>
+      <td>0.62</td>
+      <td>0.26</td>
+      <td><strong>0.99</strong></td>
+      <td>0.41</td>
+      <td>0.77</td>
+      <td>0.54</td>
+      <td>0.57</td>
     </tr>
     <tr>
-      <td>Testing</td><td>0.482</td><td>0.611</td><td>0.993</td><td>0.970</td><td>0.954</td><td>0.857</td><td>0.630</td><td>0.881</td>
+      <td>Orca 2</td>
+      <td>0.94</td>
+      <td><strong>0.30</strong></td>
+      <td><strong>0.45</strong></td>
+      <td>0.86</td>
+      <td><strong>0.70</strong></td>
+      <td><strong>0.77</td>
+      <td>0.58</td>
+      <td>0.65</td>
+      <td>0.62</td>
+      <td><strong>0.83</strong></td>
+      <td>0.61</td>
+      <td><strong>0.71</strong></td>
+      <td><strong>0.79</strong></td>
+      <td>0.62</td>
+      <td><strong>0.68</strong></td>
     </tr>
     <tr>
-      <td>Testing+recover</td><td>0.547</td><td>0.690</td><td>0.992</td><td>0.969</td><td>0.953</td><td>0.863</td><td>0.729</td><td>0.901</td>
+      <td>Llama 2</td>
+      <td><strong>1.00</strong></td>
+      <td>0.06</td>
+      <td>0.11</td>
+      <td>0.89</td>
+      <td>0.58</td>
+      <td>0.70</td>
+      <td>0.51</td>
+      <td><strong>0.93</strong></td>
+      <td><strong>0.66</td>
+      <td>0.54</td>
+      <td>0.86</td>
+      <td>0.66</td>
+      <td>0.76</td>
+      <td><strong>0.64</strong></td>
+      <td>0.61</td>
     </tr>
     <tr>
-      <td>Development</td><td>0.432</td><td>0.636</td><td>0.997</td><td>0.988</td><td>0.956</td><td>0.845</td><td>0.524</td><td>0.862</td>
-    </tr>
-    <tr>
-      <td>Development+recover</td><td>0.526</td><td>0.741</td><td>0.997</td><td>0.988</td><td>0.956</td><td>0.837</td><td>0.639</td><td>0.883</td>
+      <td>GPT-3.5</td>
+      <td>0.78</td>
+      <td><strong>0.76</strong></td>
+      <td><strong>0.77</strong></td>
+      <td><strong>0.96</strong></td>
+      <td><strong>0.71</strong></td>
+      <td><strong>0.82</strong></td>
+      <td><strong>0.66</strong></td>
+      <td>0.90</td>
+      <td><strong>0.76</strong></td>
+      <td>0.77</td>
+      <td>0.92</td>
+      <td><strong>0.84</strong></td>
+      <td><strong>0.83</strong></td>
+      <td><strong>0.80</strong></td>
+      <td><strong>0.80</strong></td>
     </tr>
   </tbody>
-</table> -->
+</table>
