@@ -206,7 +206,14 @@ Using GPT-3.5, we identified and extracted limitations from "Dissatisfied" respo
 ## Analysis
 
 - ```Difference between the outcomes of coarse prompt and fine-grained prompt```
+It is clear from the figure how the insights gained from the initial analysis with the coarse prompt, coupled with the capabilities of LLMs, informed the enhancement of the prompt design. This refinement allowed for the extraction of more nuanced insights from the dataset, as evidenced by the transition from simple categorical responses to more complex and mixed sentiment identifications.
 
 ![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/comparison_example1_.png)
 
 ![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/comparison_example1.png)
+
+
+- ```Examples of bad data points in the raw survey dataset```
+In analyzing the mental health survey data, significant challenges emerged, particularly regarding respondent engagement and data quality. Minimalistic and off-topic responses reduced the dataset's reliability, and the subjective nature of the survey introduced substantial analytical challenges. Examples of bad data points in the raw survey dataset as shown below:
+
+![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
