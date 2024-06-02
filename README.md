@@ -131,3 +131,74 @@ We designed fine-grained prompts for LLMs to predict sentiment labels of student
     </tr>
   </tbody>
 </table>
+
+
+## Limitation Analysis
+
+Using GPT-3.5, we identified and extracted limitations from "Dissatisfied" responses in the SMILE-College dataset, revealing significant areas for improvement in college mental health services. These limitations were clustered into ten categories, such as quality of counseling, accessibility, and awareness, highlighting key areas for enhancing student well-being.
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3">Frequency of Identified Limitations in Mental Health Services by Cluster</th>
+    </tr>
+    <tr>
+      <th>Cluster</th>
+      <th>Limitations</th>
+      <th>Freq</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Quality of Counseling Services</td>
+      <td>157</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Availability and Accessibility</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Challenges in accessing the services</td>
+      <td>76</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Awareness and Education</td>
+      <td>73</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Issues with Therapist Matching</td>
+      <td>65</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Inadequacies in support, communication, community connection</td>
+      <td>64</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Personal Experiences and Preferences</td>
+      <td>52</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Financial and Administrative Concerns</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Diversity and Inclusivity</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Issues with Referrals and Redirection</td>
+      <td>13</td>
+    </tr>
+  </tbody>
+</table>
+
