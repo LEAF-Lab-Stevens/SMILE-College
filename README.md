@@ -29,8 +29,73 @@ Multiple LLMs are evaluated and findings indicate limitations in the standard th
 - ```Human Annotation and Validation```
 A two-stage annotation process is employed, involving initial annotation by one annotator and validation by another. Disagreements are resolved collaboratively through discussions among annotators and researchers to reach a consensus on the final sentiment labels.
 
-## Dataset
- This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. The dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions.
+## SMILE-College Dataset
+The Sentiment analysis of students' mental health support in Colleges (SMILE-College) dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions. Below table describes the basic statistics of this dataset:
+
+<table>
+    <caption>Statistics of the SMILE-College dataset.</caption>
+    <thead>
+        <tr>
+            <th></th>
+            <th><strong>Satisfied</strong></th>
+            <th><strong>Dissatisfied</strong></th>
+            <th><strong>Mixed</strong></th>
+            <th><strong>Neutral</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>No. of Records</td>
+            <td>107</td>
+            <td>376</td>
+            <td>220</td>
+            <td>90</td>
+        </tr>
+        <tr>
+            <td>Average response length (in words)</td>
+            <td>21.84</td>
+            <td>33.01</td>
+            <td>28.06</td>
+            <td>18.15</td>
+        </tr>
+        <tr>
+            <td>Min response length (in words)</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>Max response length (in words)</td>
+            <td>93</td>
+            <td>199</td>
+            <td>106</td>
+            <td>46</td>
+        </tr>
+        <tr>
+            <td>Average # of sentences in responses</td>
+            <td>1.89</td>
+            <td>2.51</td>
+            <td>2.42</td>
+            <td>2.03</td>
+        </tr>
+        <tr>
+            <td>Min # of sentences in responses</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>Max # of sentences in responses</td>
+            <td>7</td>
+            <td>11</td>
+            <td>8</td>
+            <td>5</td>
+        </tr>
+    </tbody>
+</table>
+
 
 
 
