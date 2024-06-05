@@ -100,9 +100,14 @@ The sentiment analysis of students' mental health support in Colleges (SMILE-Col
 
 
 
+## Target Tasks
+To evaluate the usability of the \ourdata\ data, we investigated three tasks: 
+- T1 Sentiment prediction: text-based multi-class classification of sentiment labels for students' responses with a task-specific fine-grained prompt for LLMs.
+- T2 Prediction error analysis: examine the prediction errors of LLMs across different sentiment categories.
+- T3 Support limitation identification: based on the responses labeled as ``Dissatisfied'', we utilize the capabilities of LLMs, embedding learning, and clustering techniques to pinpoint the main shortcomings in student mental health support in colleges.
 
-## Sentiment Prediction
-We designed **fine-grained** prompts for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
+- **Sentiment Prediction**
+We designed **fine-grained** prompts with the four nuanced sentiment categories for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
 
 <table>
   <thead>
@@ -209,8 +214,9 @@ We designed **fine-grained** prompts for LLMs to predict sentiment labels of stu
   </tbody>
 </table>
 
+- **Prediction Error Analysis with Confusion Matrix**
 
-## Limitations Analysis of Mental Health Support in Colleges
+- **Limitations Analysis of Mental Health Support in Colleges**
 
 Using GPT-3.5, we identified and extracted limitations from "Dissatisfied" responses in the SMILE-College dataset, revealing significant areas for improvement in college mental health services. These limitations were clustered into ten categories, such as quality of counseling, accessibility, and awareness, highlighting key areas for enhancing student well-being.
 
