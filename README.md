@@ -2,9 +2,9 @@
 
 [![image](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-- This repository is an implementation of the SMILE-College (SentiMent analysis of students' mental health support in Colleges) dataset for Sentiment Prediction and Limitation Analysis tasks.
+- This repository is an implementation of the SMILE-College (Sentiment analysis of students' mental health support in Colleges) dataset for Sentiment Prediction and Limitation Analysis tasks.
 
-- In this work, we are releasing a publicaly available dataset SMILE-College for Sentiment Prediction task on students mental health support in colleges. The SMILE-College dataset is provided in folder [SMILE-College Dataset](https://github.com/LEAF-Lab-Stevens/SMILE-College/tree/main/SMILE-College%20Dataset) in this repository. More details are provided below.
+- In this work, we are releasing the newly created dataset SMILE-College for Sentiment Prediction task on students mental health support in colleges. The SMILE-College dataset is provided in folder [SMILE-College Dataset](https://github.com/LEAF-Lab-Stevens/SMILE-College/tree/main/SMILE-College%20Dataset) in this repository. More details are provided below.
 
 - Links related to this work:
   - Dataset and codes: https://github.com/LEAF-Lab-Stevens/SMILE-College
