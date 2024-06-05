@@ -21,7 +21,7 @@ In analyzing the mental health survey data, significant challenges emerged, part
 ![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
 
 This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. 
-```Three Steps involved during annotations:```
+**Three Steps involved during annotations:**
 - ```Sentiment Annotation with LLMs```
 Utilizes large language models (LLMs) with a coarse prompt to categorize sentiments into the standard three categories: Satisfied, Dissatisfied, and Neutral. This step serves as a preliminary assessment of students' sentiment spectrum. The coarse prompt includes task-specific instructions, survey questions with responses, and label-specific guidelines to guide the LLMs.
 - ```Sentiment Category Identification```
