@@ -158,20 +158,20 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
     <tr>
       <td>Orca 2</td>
       <td>0.94</td>
-      <td><strong>0.30</strong></td>
-      <td><strong>0.45</strong></td>
+      <td>0.30</td>
+      <td>0.45</td>
       <td>0.86</td>
-      <td><strong>0.70</strong></td>
-      <td><strong>0.77</td>
+      <td>0.70</td>
+      <td>0.77</td>
       <td>0.58</td>
       <td>0.65</td>
       <td>0.62</td>
-      <td><strong>0.83</strong></td>
+      <td>0.83</td>
       <td>0.61</td>
-      <td><strong>0.71</strong></td>
-      <td><strong>0.79</strong></td>
+      <td>0.71</td>
+      <td>0.79</td>
       <td>0.62</td>
-      <td><strong>0.68</strong></td>
+      <td>0.68</td>
     </tr>
     <tr>
       <td>Llama 2</td>
@@ -183,12 +183,12 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
       <td>0.70</td>
       <td>0.51</td>
       <td><strong>0.93</strong></td>
-      <td><strong>0.66</td>
+      <td>0.66</td>
       <td>0.54</td>
       <td>0.86</td>
       <td>0.66</td>
       <td>0.76</td>
-      <td><strong>0.64</strong></td>
+      <td>0.64</td>
       <td>0.61</td>
     </tr>
     <tr>
