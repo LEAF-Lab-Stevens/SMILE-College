@@ -2,21 +2,20 @@
 
 [![image](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-- This repository is an implementation of the SMILE-College (Sentiment analysis of students' mental health support in Colleges) dataset for Sentiment Prediction and Limitation Analysis tasks.
-
-- In this work, we are releasing the newly created dataset SMILE-College for Sentiment Prediction task on students mental health support in colleges. The SMILE-College dataset is provided in folder [SMILE-College Dataset](https://github.com/LEAF-Lab-Stevens/SMILE-College/tree/main/SMILE-College%20Dataset) in this repository. More details are provided below.
+- In this repository, we are releasing the newly created SMILE-College (Sentiment analysis of students' mental health support in Colleges) dataset for sentiment prediction and limitation analysis tasks of mental health support in colleges. The SMILE-College dataset is provided in folder [SMILE-College Dataset](https://github.com/LEAF-Lab-Stevens/SMILE-College/tree/main/SMILE-College%20Dataset) in this repository. More details are provided below.
 
 - Links related to this work:
   - Dataset and codes: https://github.com/LEAF-Lab-Stevens/SMILE-College
+  - Student Voice Survery data: https://reports.collegepulse.com/current-state-of-mental-health
 
-## Student Voice Survey
-This study uses Student Voice Survey (SVS) response data by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health) on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services. 
+## Student Voice Survey (SVS)
+This study uses Student Voice Survey response data by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health) on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services. 
 
 ```Survey Question:``` What mental health or wellness services and supports provided by your college are working well? What aspects of mental health and wellness need more attention?
 
 ## Data Pre-processing
-- **Examples of bad data points in the raw survey dataset**
-In analyzing the mental health survey data, significant challenges emerged, particularly regarding respondent engagement and data quality. Minimalistic and off-topic responses reduced the dataset's reliability, and the subjective nature of the survey introduced substantial analytical challenges. Examples of bad data points in the raw survey dataset as shown below:
+- **Examples of responses without necessary context for sentiment analysis**
+In analyzing the mental health survey data, significant challenges emerged, particularly regarding respondent engagement and data quality. Minimalistic and off-topic responses reduced the dataset's reliability, and the subjective nature of the survey introduced substantial analytical challenges. Examples of such data points in the original SVS dataset are shown below:
 
 ![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
 
@@ -33,7 +32,7 @@ Multiple LLMs are evaluated and findings indicate limitations in the standard th
 A two-stage annotation process is employed, involving initial annotation by one annotator and validation by another. Disagreements are resolved collaboratively through discussions among annotators and researchers to reach a consensus on the final sentiment labels.
 
 ## SMILE-College Dataset
-The Sentiment analysis of students' mental health support in Colleges (SMILE-College) dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions. Below table describes the basic statistics of this dataset:
+The sentiment analysis of students' mental health support in Colleges (SMILE-College) dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions. The following table describes the basic statistics of this dataset:
 
 <table>
     <caption>Statistics of the SMILE-College dataset.</caption>
