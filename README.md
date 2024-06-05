@@ -20,6 +20,9 @@ In analyzing the mental health survey data, significant challenges emerged, part
 
 ![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
 
+
+## Sentiment Annotations
+
 This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. 
 **Three Steps involved during annotations:**
 - ```Sentiment Annotation with LLMs```
