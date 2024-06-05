@@ -10,7 +10,8 @@
   - Dataset and codes: https://github.com/LEAF-Lab-Stevens/SMILE-College
 
 ## Student Voice Survey
-This study uses SVS response data on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services.
+This study uses Student Voice Survey (SVS) response data by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health) on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services. 
+
 ```Survey Question:``` What mental health or wellness services and supports provided by your college are working well? What aspects of mental health and wellness need more attention?
 
 ## Data Pre-processing
@@ -19,20 +20,18 @@ In analyzing the mental health survey data, significant challenges emerged, part
 
 ![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
 
-
-
-## Dataset
-The SMILE-College dataset is designed for sentiment analysis of student responses regarding mental health support in colleges. It is created using the responses of a survey question, Student Voice Survey by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health). This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. The dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions.
-
-
-
-Three Steps involved during annotations:
+This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. 
+```Three Steps involved during annotations:```
 - ```Sentiment Annotation with LLMs```
 Utilizes large language models (LLMs) with a coarse prompt to categorize sentiments into the standard three categories: Satisfied, Dissatisfied, and Neutral. This step serves as a preliminary assessment of students' sentiment spectrum. The coarse prompt includes task-specific instructions, survey questions with responses, and label-specific guidelines to guide the LLMs.
 - ```Sentiment Category Identification```
 Multiple LLMs are evaluated and findings indicate limitations in the standard three-category framework, leading to the introduction of the "Mixed" category for nuanced sentiment expressions.
 - ```Human Annotation and Validation```
 A two-stage annotation process is employed, involving initial annotation by one annotator and validation by another. Disagreements are resolved collaboratively through discussions among annotators and researchers to reach a consensus on the final sentiment labels.
+
+## Dataset
+ This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. The dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions.
+
 
 
 ## Sentiment Prediction
