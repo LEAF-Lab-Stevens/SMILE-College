@@ -104,6 +104,7 @@ The sentiment analysis of students' mental health support in Colleges (SMILE-Col
 To evaluate the usability of the SMILE-College data, we investigated three tasks: Sentiment prediction, Prediction error analysis, and Support limitation identification.
 
 - **Sentiment Prediction**
+
 We designed **fine-grained** prompts with the four nuanced sentiment categories for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
 
 <table>
