@@ -216,26 +216,24 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
 
 The confusion matrices in below figure reveal that both GPT-3.5 and Orca 2 struggle to distinguish between "Mixed" and "Dissatisfied" sentiments, while Mistral tends to categorize many records as "Neutral." Llama 2 shows confusion between "Dissatisfied" and "Mixed" categories and often misclassifies "Satisfied" records as "Mixed" or "Neutral."
 
-<div style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 200px; text-align: center;">
+<div style="display: flex; justify-content: space-around; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; margin: 10px;">
         <img src="https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/cf_mistral.png" alt="Mistral" style="width: 100%;">
         <p><strong>Mistral</strong></p>
     </div>
-    <div style="flex: 1; min-width: 200px; text-align: center;">
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; margin: 10px;">
         <img src="https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/cf_orca.png" alt="Orca 2" style="width: 100%;">
         <p><strong>Orca 2</strong></p>
     </div>
-    <div style="flex: 1; min-width: 200px; text-align: center;">
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; margin: 10px;">
         <img src="https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/cf_llama.png" alt="Llama 2" style="width: 100%;">
         <p><strong>Llama 2</strong></p>
     </div>
-    <div style="flex: 1; min-width: 200px; text-align: center;">
+    <div style="flex: 1; min-width: 200px; max-width: 300px; text-align: center; margin: 10px;">
         <img src="https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/cf_gpt3.5.png" alt="GPT-3.5" style="width: 100%;">
         <p><strong>GPT-3.5</strong></p>
     </div>
 </div>
-
-<p><strong>Figure:</strong> Confusion metrics for the four models on SMILE-College dataset.</p>
 
 - **Limitations Analysis of Mental Health Support in Colleges**
 
