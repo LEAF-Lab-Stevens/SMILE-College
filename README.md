@@ -9,11 +9,22 @@
 - Links related to this work:
   - Dataset and codes: https://github.com/LEAF-Lab-Stevens/SMILE-College
 
+## Student Voice Survey
+This study uses SVS response data on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services.
+```Survey Question:``` What mental health or wellness services and supports provided by your college are working well? What aspects of mental health and wellness need more attention?
+
+## Data Pre-processing
+- **Examples of bad data points in the raw survey dataset**
+In analyzing the mental health survey data, significant challenges emerged, particularly regarding respondent engagement and data quality. Minimalistic and off-topic responses reduced the dataset's reliability, and the subjective nature of the survey introduced substantial analytical challenges. Examples of bad data points in the raw survey dataset as shown below:
+
+![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
+
+
 
 ## Dataset
 The SMILE-College dataset is designed for sentiment analysis of student responses regarding mental health support in colleges. It is created using the responses of a survey question, Student Voice Survey by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health). This dataset is annotated through a meticulous human-machine collaboration process, ensuring comprehensive sentiment categorization and accuracy. The dataset comprises of ```school name, comments and validated_labels```. The sentiment labels include four categories: ```Satisfied, Dissatisfied, Mixed, and Neutral```, providing a nuanced understanding of students' emotional expressions.
 
-```Survey Question:``` What mental health or wellness services and supports provided by your college are working well? What aspects of mental health and wellness need more attention?
+
 
 Three Steps involved during annotations:
 - ```Sentiment Annotation with LLMs```
@@ -203,18 +214,5 @@ Using GPT-3.5, we identified and extracted limitations from "Dissatisfied" respo
 </table>
 
 
-## Analysis
-
-- **Examples of bad data points in the raw survey dataset**
-In analyzing the mental health survey data, significant challenges emerged, particularly regarding respondent engagement and data quality. Minimalistic and off-topic responses reduced the dataset's reliability, and the subjective nature of the survey introduced substantial analytical challenges. Examples of bad data points in the raw survey dataset as shown below:
-
-![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
-
-- **Difference between the outcomes of coarse prompt and fine-grained prompt**
-It is clear from the figure how the insights gained from the initial analysis with the coarse prompt, coupled with the capabilities of LLMs, informed the enhancement of the prompt design. This refinement allowed for the extraction of more nuanced insights from the dataset, as evidenced by the transition from simple categorical responses to more complex and mixed sentiment identifications.
-
-![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/comparison_example1_.png)
-
-![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/comparison_example1.png)
 
 
