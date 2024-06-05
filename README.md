@@ -17,11 +17,11 @@ The SMILE-College dataset is designed for sentiment analysis of student response
 
 Three Steps involved during annotations:
 - ```Sentiment Annotation with LLMs```
-Utilizes large language models (LLMs) with a **coarse prompt** to categorize sentiments into Satisfied, Dissatisfied, and Neutral. This step serves as a preliminary assessment of students' sentiment spectrum.
+Utilizes large language models (LLMs) with a coarse prompt to categorize sentiments into the standard three categories: Satisfied, Dissatisfied, and Neutral. This step serves as a preliminary assessment of students' sentiment spectrum. The coarse prompt includes task-specific instructions, survey questions with responses, and label-specific guidelines to guide the LLMs.
 - ```Sentiment Category Identification```
 Multiple LLMs are evaluated and findings indicate limitations in the standard three-category framework, leading to the introduction of the "Mixed" category for nuanced sentiment expressions.
 - ```Human Annotation and Validation```
-A two-stage annotation process is employed, involving initial annotation by one annotator and validation by another.
+A two-stage annotation process is employed, involving initial annotation by one annotator and validation by another. Disagreements are resolved collaboratively through discussions among annotators and researchers to reach a consensus on the final sentiment labels.
 
 
 ## Sentiment Prediction
@@ -133,7 +133,7 @@ We designed **fine-grained** prompts for LLMs to predict sentiment labels of stu
 </table>
 
 
-## Limitation Analysis
+## Limitations Analysis of Mental Health Support in Colleges
 
 Using GPT-3.5, we identified and extracted limitations from "Dissatisfied" responses in the SMILE-College dataset, revealing significant areas for improvement in college mental health services. These limitations were clustered into ten categories, such as quality of counseling, accessibility, and awareness, highlighting key areas for enhancing student well-being.
 
