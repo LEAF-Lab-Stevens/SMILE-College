@@ -166,7 +166,7 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
       <td>0.58</td>
       <td>0.65</td>
       <td>0.62</td>
-      <td>0.83</td>
+      <td><strong>0.83</strong></td>
       <td>0.61</td>
       <td>0.71</td>
       <td>0.79</td>
