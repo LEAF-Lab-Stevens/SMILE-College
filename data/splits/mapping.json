@@ -1,0 +1,14 @@
+{
+    "class_mapping": {
+        "not-satisfied": 3,
+        "satisfied": 1,
+        "both": 2,
+        "neutral": 0
+    },
+    "class_mapping_reverse": {
+        "3": "not-satisfied",
+        "1": "satisfied",
+        "2": "both",
+        "0": "neutral"
+    }
+}
