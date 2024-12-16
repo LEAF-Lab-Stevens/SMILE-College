@@ -27,7 +27,7 @@ This study uses Student Voice Survey response data by College Pulse (https://rep
 - **Examples of responses without necessary context for sentiment analysis**
 In analyzing the mental health survey data, significant challenges emerged, particularly regarding respondent engagement and data quality. Minimalistic and off-topic responses reduced the dataset's reliability, and the subjective nature of the survey introduced substantial analytical challenges. Examples of such data points in the original SVS dataset are shown below:
 
-![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/examples_rq2.png)
+![image](images/examples_rq2.png)
 
 
 ## Sentiment Annotations
@@ -111,6 +111,9 @@ The sentiment analysis of students' mental health support in Colleges (SMILE-Col
 
 
 ## Target Tasks
+
+![image](images/overall_framework.png)
+
 To evaluate the usability of the SMILE-College data, we investigated three tasks: Sentiment prediction, Prediction error analysis, and Support limitation identification.
 
 - **Sentiment Prediction**
@@ -118,9 +121,170 @@ To evaluate the usability of the SMILE-College data, we investigated three tasks
 We designed **fine-grained** prompts with the four nuanced sentiment categories for LLMs to predict sentiment labels of student responses. GPT-3.5 outperformed other models, particularly in F1 scores, with Orca 2 showing the best results among the 7 billion-parameter models.
 
 <table>
+  <caption>Overall performance on SMILE-College test-set</caption>
   <thead>
     <tr>
       <th></th>
+      <th colspan="3"><strong>Satisfied</strong></th>
+      <th colspan="3"><strong>Dissatisfied</strong></th>
+      <th colspan="3"><strong>Mixed</strong></th>
+      <th colspan="3"><strong>Neutral</strong></th>
+      <th colspan="3"><strong>Overall</strong></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>LR</strong></td>
+      <td>0.45</td>
+      <td>0.24</td>
+      <td>0.31</td>
+      <td>0.64</td>
+      <td>0.77</td>
+      <td>0.70</td>
+      <td><u>0.59</u></td>
+      <td>0.55</td>
+      <td>0.57</td>
+      <td>0.69</td>
+      <td>0.58</td>
+      <td>0.63</td>
+      <td>0.61</td>
+      <td>0.62</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <td><strong>SVM</strong></td>
+      <td>0.50</td>
+      <td>0.33</td>
+      <td>0.40</td>
+      <td>0.63</td>
+      <td><u>0.78</u></td>
+      <td>0.70</td>
+      <td>0.53</td>
+      <td>0.40</td>
+      <td>0.46</td>
+      <td>0.71</td>
+      <td>0.63</td>
+      <td>0.67</td>
+      <td>0.60</td>
+      <td>0.61</td>
+      <td>0.60</td>
+    </tr>
+    <tr>
+      <td><strong>BERT</strong></td>
+      <td>0.68</td>
+      <td><u>0.71</u></td>
+      <td>0.70</td>
+      <td>0.88</td>
+      <td><strong>0.85</strong></td>
+      <td><strong>0.86</strong></td>
+      <td><strong>0.62</strong></td>
+      <td>0.70</td>
+      <td><u>0.66</u></td>
+      <td><u>0.88</u></td>
+      <td>0.74</td>
+      <td><u>0.80</u></td>
+      <td><u>0.79</u></td>
+      <td><u>0.78</u></td>
+      <td><u>0.78</u></td>
+    </tr>
+    <tr>
+      <td><strong>Mistral</strong></td>
+      <td><u>0.83</u></td>
+      <td>0.48</td>
+      <td>0.61</td>
+      <td><u>0.98</u></td>
+      <td>0.52</td>
+      <td>0.68</td>
+      <td>0.56</td>
+      <td>0.50</td>
+      <td>0.53</td>
+      <td>0.28</td>
+      <td><strong>1.00</strong></td>
+      <td>0.43</td>
+      <td>0.77</td>
+      <td>0.57</td>
+      <td>0.60</td>
+    </tr>
+    <tr>
+      <td><strong>Orca 2</strong></td>
+      <td><strong>0.88</strong></td>
+      <td>0.61</td>
+      <td><u>0.72</u></td>
+      <td>0.95</td>
+      <td>0.25</td>
+      <td>0.40</td>
+      <td>0.34</td>
+      <td><strong>0.95</strong></td>
+      <td>0.50</td>
+      <td><strong>1.00</strong></td>
+      <td>0.17</td>
+      <td>0.29</td>
+      <td>0.78</td>
+      <td>0.48</td>
+      <td>0.46</td>
+    </tr>
+    <tr>
+      <td><strong>Llama 2</strong></td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.93</td>
+      <td>0.63</td>
+      <td><u>0.75</u></td>
+      <td>0.50</td>
+      <td><strong>0.95</strong></td>
+      <td><u>0.66</u></td>
+      <td>0.52</td>
+      <td>0.79</td>
+      <td>0.62</td>
+      <td>0.65</td>
+      <td>0.65</td>
+      <td>0.61</td>
+    </tr>
+    <tr>
+      <td><strong>GPT-3.5</strong></td>
+      <td>0.66</td>
+      <td><strong>0.90</strong></td>
+      <td><strong>0.76</strong></td>
+      <td><strong>1.00</strong></td>
+      <td>0.75</td>
+      <td><strong>0.86</strong></td>
+      <td><strong>0.62</strong></td>
+      <td><u>0.78</u></td>
+      <td><strong>0.69</strong></td>
+      <td>0.81</td>
+      <td><u>0.89</u></td>
+      <td><strong>0.85</strong></td>
+      <td><strong>0.84</strong></td>
+      <td><strong>0.79</strong></td>
+      <td><strong>0.80</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <caption>Overall performance on the entire SMILE-College dataset</caption>
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
       <th colspan="3">Satisfied</th>
       <th colspan="3">Dissatisfied</th>
       <th colspan="3">Mixed</th>
@@ -128,7 +292,6 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
       <th colspan="3">Overall</th>
     </tr>
     <tr>
-      <th></th>
       <th>Precision</th>
       <th>Recall</th>
       <th>F1</th>
@@ -152,14 +315,14 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
       <td>0.88</td>
       <td>0.28</td>
       <td>0.43</td>
-      <td>0.95</td>
+      <td><u>0.95</u></td>
       <td>0.46</td>
       <td>0.62</td>
-      <td>0.61</td>
+      <td><u>0.61</u></td>
       <td>0.64</td>
       <td>0.62</td>
       <td>0.26</td>
-      <td><strong>0.99</strong></td>
+      <td><b>0.99</b></td>
       <td>0.41</td>
       <td>0.77</td>
       <td>0.54</td>
@@ -167,66 +330,67 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
     </tr>
     <tr>
       <td>Orca 2</td>
-      <td>0.94</td>
-      <td>0.30</td>
+      <td><u>0.89</u></td>
+      <td><u>0.56</u></td>
+      <td><u>0.69</u></td>
+      <td><b>0.96</b></td>
+      <td>0.23</td>
+      <td>0.37</td>
+      <td>0.32</td>
+      <td><b>0.97</b></td>
+      <td>0.48</td>
+      <td><b>0.93</b></td>
+      <td>0.14</td>
+      <td>0.24</td>
+      <td><u>0.78</u></td>
       <td>0.45</td>
-      <td>0.86</td>
-      <td>0.70</td>
-      <td>0.77</td>
-      <td>0.58</td>
-      <td>0.65</td>
-      <td>0.62</td>
-      <td><strong>0.83</strong></td>
-      <td>0.61</td>
-      <td>0.71</td>
-      <td>0.79</td>
-      <td>0.62</td>
-      <td>0.68</td>
+      <td>0.42</td>
     </tr>
     <tr>
       <td>Llama 2</td>
-      <td><strong>1.00</strong></td>
+      <td><b>1.00</b></td>
       <td>0.06</td>
       <td>0.11</td>
       <td>0.89</td>
-      <td>0.58</td>
-      <td>0.70</td>
+      <td><u>0.58</u></td>
+      <td><u>0.70</u></td>
       <td>0.51</td>
-      <td><strong>0.93</strong></td>
-      <td>0.66</td>
+      <td><u>0.93</u></td>
+      <td><u>0.66</u></td>
       <td>0.54</td>
       <td>0.86</td>
-      <td>0.66</td>
+      <td><u>0.66</u></td>
       <td>0.76</td>
-      <td>0.64</td>
-      <td>0.61</td>
+      <td><u>0.64</u></td>
+      <td><u>0.61</u></td>
     </tr>
     <tr>
       <td>GPT-3.5</td>
       <td>0.78</td>
-      <td><strong>0.76</strong></td>
-      <td><strong>0.77</strong></td>
-      <td><strong>0.96</strong></td>
-      <td><strong>0.71</strong></td>
-      <td><strong>0.82</strong></td>
-      <td><strong>0.66</strong></td>
+      <td><b>0.76</b></td>
+      <td><b>0.77</b></td>
+      <td><b>0.96</b></td>
+      <td><b>0.71</b></td>
+      <td><b>0.82</b></td>
+      <td><b>0.66</b></td>
       <td>0.90</td>
-      <td><strong>0.76</strong></td>
-      <td>0.77</td>
-      <td>0.92</td>
-      <td><strong>0.84</strong></td>
-      <td><strong>0.83</strong></td>
-      <td><strong>0.80</strong></td>
-      <td><strong>0.80</strong></td>
+      <td><b>0.76</b></td>
+      <td><u>0.77</u></td>
+      <td><u>0.92</u></td>
+      <td><b>0.84</b></td>
+      <td><b>0.83</b></td>
+      <td><b>0.80</b></td>
+      <td><b>0.80</b></td>
     </tr>
   </tbody>
 </table>
+
 
 - **Prediction Error Analysis with Confusion Matrix**
 
 The confusion matrices in below figure reveal that both GPT-3.5 and Orca 2 struggle to distinguish between "Mixed" and "Dissatisfied" sentiments, while Mistral tends to categorize many records as "Neutral." Llama 2 shows confusion between "Dissatisfied" and "Mixed" categories and often misclassifies "Satisfied" records as "Mixed" or "Neutral."
 
-![image](https://github.com/LEAF-Lab-Stevens/SMILE-College/blob/main/images/confusion_metrics.png)
+![image](images/confusion_metrics.png)
 
 
 - **Limitations Analysis of Mental Health Support in Colleges**
