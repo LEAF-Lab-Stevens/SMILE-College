@@ -2,11 +2,21 @@
 
 [![image](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
 
-- In this repository, we are releasing the newly created SMILE-College (Sentiment analysis of students' mental health support in Colleges) dataset for sentiment prediction and limitation analysis tasks of mental health support in colleges. The SMILE-College dataset is provided in folder [SMILE-College Dataset](https://github.com/LEAF-Lab-Stevens/SMILE-College/tree/main/SMILE-College%20Dataset) in this repository. More details are provided below.
+- In this repository, we are releasing the newly created SMILE-College (Sentiment analysis of students' mental health support in Colleges) dataset for sentiment prediction and limitation analysis tasks of mental health support in colleges. The SMILE-College dataset is provided in folder [data/SMILE-College Dataset](data/SMILE-College%20Dataset/) in this repository. More details are provided below.
 
 - Links related to this work:
-  - Dataset and codes: https://github.com/LEAF-Lab-Stevens/SMILE-College
   - Student Voice Survery data: https://reports.collegepulse.com/current-state-of-mental-health
+  - Dataset and codes:
+      - [Student Voice Survey Webpage HTML](data/student-voice-survey.html) is parsed for data retrieval in [survey_data_retrieval.ipynb](notebooks/survey_data_retrieval.ipynb).
+      - Retrieved data is processed and stored in [smile-college-dataset.csv](data/SMILE-College%20Dataset/smile-college-dataset.csv)
+      - Data Exploration is done within [data_analysis.ipynb](notebooks/data_analysis.ipynb)
+      - [prepare_survey_data.ipynb](notebooks/prepare_survey_data.ipynb) prepares [train-val-test splits](data/splits) from [smile-college-dataset.csv](data/SMILE-College%20Dataset/smile-college-dataset.csv) 
+      - 3 types of Modeling (using [splits](data/splits/)):
+          - [Baseline](notebooks/baseline.ipynb) - has benchmarks using Traditional ML techniques
+          - Encoder based [(BERT) finetuning and inferencing](notebooks/bert.ipynb)
+          - Decoder based LLM [inferencing](notebooks/inference_llms.ipynb) and [finetuning](notebooks/finetuning_llm.ipynb)
+      - Inference results across models are merged and ensembled in [results.ipynb](notebooks/results.ipynb) for benchmarking model performance
+      - [smile-college-dataset.csv](data/SMILE-College%20Dataset/smile-college-dataset.csv) is analysed for extracting the main limitations in notebooks - [limitation_analysis.ipynb](notebooks/limitation_analysis.ipynb) and [limitation_frequency_analysis.ipynb](notebooks/limitation_frequency_analysis.ipynb)
 
 ## Student Voice Survey (SVS)
 This study uses Student Voice Survey response data by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health) on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services. 
