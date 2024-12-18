@@ -18,6 +18,21 @@
       - Inference results across models are merged and ensembled in [results.ipynb](notebooks/results.ipynb) for benchmarking model performance
       - [smile-college-dataset.csv](data/SMILE-College%20Dataset/smile-college-dataset.csv) is analysed for extracting the main limitations in notebooks - [limitation_analysis.ipynb](notebooks/limitation_analysis.ipynb) and [limitation_frequency_analysis.ipynb](notebooks/limitation_frequency_analysis.ipynb)
 
+## Citation
+Palak Sood, Chengyang He, Divyanshu Gupta, Yue Ning and Ping Wang. "Understanding Student Sentiment on Mental Health Support in Colleges Using Large Language Models" In Proceedings of The 2024 IEEE International Conference on Big Data (IEEE BigData 2024).
+
+```
+@misc{sood2024understandingstudentsentimentmental,
+      title={Understanding Student Sentiment on Mental Health Support in Colleges Using Large Language Models}, 
+      author={Palak Sood and Chengyang He and Divyanshu Gupta and Yue Ning and Ping Wang},
+      year={2024},
+      eprint={2412.04326},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.04326}, 
+}
+```
+
 ## Student Voice Survey (SVS)
 This study uses Student Voice Survey response data by College Pulse (https://reports.collegepulse.com/current-state-of-mental-health) on the current state of mental health, designed by College Pulse, to examine the social and emotional well-being of students. Conducted in 2022, the survey included 20 questions and was completed by 2,000 undergraduate students from over 1,500 U.S. colleges and universities. The study focuses on text responses  of a survey question regarding the effectiveness and areas needing improvement in college mental health services. 
 
