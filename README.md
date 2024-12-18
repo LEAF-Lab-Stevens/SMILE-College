@@ -390,7 +390,7 @@ We designed **fine-grained** prompts with the four nuanced sentiment categories 
 
 The confusion matrices in below figure reveal that both GPT-3.5 and Orca 2 struggle to distinguish between "Mixed" and "Dissatisfied" sentiments, while Mistral tends to categorize many records as "Neutral." Llama 2 shows confusion between "Dissatisfied" and "Mixed" categories and often misclassifies "Satisfied" records as "Mixed" or "Neutral."
 
-![image](images/confusion_metrics.png)
+![image](images/confusion_matrices.png)
 
 
 - **Limitations Analysis of Mental Health Support in Colleges**
